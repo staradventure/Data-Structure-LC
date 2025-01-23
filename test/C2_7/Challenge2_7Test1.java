@@ -1,4 +1,4 @@
-package test;
+package test.C2_7;
 
 import org.junit.jupiter.api.*;
 import raw.Challenge2_7;
@@ -6,7 +6,7 @@ import raw.Challenge2_7;
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-class Challenge2_7Test1 {
+public class Challenge2_7Test1 {
     static Challenge2_7.MyLinkedList myLinkedList = new Challenge2_7.MyLinkedList();
 
 

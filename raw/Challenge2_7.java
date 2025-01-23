@@ -45,6 +45,9 @@ public class Challenge2_7 {
         }
 
         public void addAtIndex(int index, int val) {
+            if(index>length||index<0){
+                return;
+            }
             LinkNode p=new LinkNode(val);
             int count=0;
             LinkNode s=head;
@@ -70,6 +73,7 @@ public class Challenge2_7 {
                 count++;
             }
             m.next=s.next;
+            length--;
         }
         class LinkNode{
             int val;

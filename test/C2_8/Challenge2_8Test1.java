@@ -1,4 +1,4 @@
-package test;
+package test.C2_8;
 
 import org.junit.jupiter.api.*;
 import raw.Challenge2_8;
@@ -7,20 +7,24 @@ import static org.junit.jupiter.api.Assertions.*;
 import static raw.Challenge2_8.Solution.list;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-class Challenge2_8Test2 {
+class Challenge2_8Test1 {
     static Challenge2_8.Solution.ListNode head;
     Challenge2_8.Solution s;
     @BeforeAll
     static void setup(){
         head=new Challenge2_8.Solution.ListNode(1);
-        head.next=null;
+        Challenge2_8.Solution.ListNode p2=new Challenge2_8.Solution.ListNode(2);
+        Challenge2_8.Solution.ListNode p3=new Challenge2_8.Solution.ListNode(3);
+        head.next=p2;
+        p2.next=p3;
+        p3.next=null;
     }
 
     @Test
     @Order(1)
     void constructor_test(){
         s=new Challenge2_8.Solution(head);
-        Integer[] expected = {1};
+        Integer[] expected = {1, 2, 3};
         Integer[] actual = list.toArray(new Integer[0]);
         assertArrayEquals(expected, actual);
 

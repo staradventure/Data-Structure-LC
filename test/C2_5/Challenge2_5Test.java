@@ -1,4 +1,4 @@
-package test;
+package test.C2_5;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static raw.Challenge2_5.merge;

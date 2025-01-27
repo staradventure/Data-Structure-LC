@@ -1,4 +1,4 @@
-package test;
+package test.C2_8;
 
 import org.junit.jupiter.api.*;
 import raw.Challenge2_8;

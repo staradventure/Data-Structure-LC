@@ -67,4 +67,12 @@ class Challenge2_8Test3 {
         }
     }
 
+    @Test
+    @Order(5)
+    void getRandom_test_10000(){
+        for(int i=1;i<=10000;i++){
+            assertDoesNotThrow(Challenge2_8.Solution::getRandom);
+        }
+    }
+
 }

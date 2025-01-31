@@ -61,18 +61,21 @@ class Challenge2_8Test3 {
 
     @Test
     @Order(4)
-    void getRandom_test_5000(){
-        for(int i=1;i<=5000;i++){
+    void getRandom_test_5000() {
+        for (int i = 1; i <= 5000; i++) {
             assertDoesNotThrow(Challenge2_8.Solution::getRandom);
         }
     }
 
     @Test
     @Order(5)
-    void getRandom_test_10000(){
-        for(int i=1;i<=10000;i++){
-            assertDoesNotThrow(Challenge2_8.Solution::getRandom);
-        }
+    void getRandom_test_10000() {
+        assertDoesNotThrow(() ->
+        {
+            for (int i = 1; i <= 10000; i++) {
+                Challenge2_8.Solution.getRandom();
+            }
+        });
     }
 
 }

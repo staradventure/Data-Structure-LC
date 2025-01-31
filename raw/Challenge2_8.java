@@ -21,7 +21,7 @@ public class Challenge2_8 {
             }
             else {
                 java.util.Random random = new Random();
-                int index = random.nextInt(list.size() - 1);
+                int index = random.nextInt(list.size());
                 return list.get(index);
             }
         }

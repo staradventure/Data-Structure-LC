@@ -1,4 +1,4 @@
-package test;
+package test.C2_9;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -7,7 +7,6 @@ import static raw.Challenge2_9.Solution.removeElements;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static test.Challenge2_9Test1.head;
 
 class Challenge2_9Test2 {
     static Challenge2_9.Solution.ListNode head;

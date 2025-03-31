@@ -1,4 +1,4 @@
-package raw;
+package raw.Chapter1;
 
 public class Challenge1_3 {
     class Solution {

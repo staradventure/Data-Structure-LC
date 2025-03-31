@@ -3,7 +3,7 @@ package test.C1_4;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static raw.Challenge1_4.sumOddLengthSubarrays;
+import static raw.Chapter1.Challenge1_4.sumOddLengthSubarrays;
 
 class Challenge1_4Test {
 

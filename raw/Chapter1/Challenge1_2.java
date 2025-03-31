@@ -1,4 +1,4 @@
-package raw;
+package raw.Chapter1;
 import java.math.BigInteger;
 
 public class Challenge1_2 {

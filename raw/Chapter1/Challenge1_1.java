@@ -1,4 +1,4 @@
-package raw;
+package raw.Chapter1;
 import java.lang.Math;
 
 public class Challenge1_1 {

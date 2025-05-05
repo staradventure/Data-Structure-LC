@@ -28,7 +28,7 @@ public class Challenge2_12 {
             }
             Collections.reverse(list);
             ListNode t = p;
-            int index_max = ready - count;//TODO:这里的边界关系可能会出错。
+            int index_max = ready - count;
             int index = 0;
             while (t != s.next && t != null && index <= index_max) {
                 t.val = list.get(index);

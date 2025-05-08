@@ -6,28 +6,41 @@ import java.util.List;
 public class Challenge2_25 {
     public class Solution {
         public static ListNode mergeKLists(ListNode[] lists) {
-            int[] number_list=get_it(0, lists.length-1);
-            return merge_func(lists,number_list);
-        }
-
-        public static ListNode merge_func(ListNode[] lists, int[] temp_list){
-            if(temp_list[0]==temp_list[1]){
-                return lists[temp_list[0]];
-            }
-            if(temp_list[0]+1==temp_list[1]){
-                return mergeTwoLists(lists[temp_list[0]],lists[temp_list[0]]);
-            }
-            int[] number_list=get_it(temp_list[0],temp_list[1]);
-            merge_func(lists,number_list);
-            //TODO:合并内容
+            return merge_func(lists,new int [] {0, lists.length-1});
         }
 
         /**
          *
-         * 输入是起始编号，给出需要合并的头节点编号
+         * @param lists 包含待合并的链表的头节点数组
+         * @param temp_list
+         * @return
+         */
+        public static ListNode merge_func(ListNode[] lists, int[] temp_list){
+            ListNode node1=null;
+            ListNode node2=null;
+            if(temp_list[0]==temp_list[1]){
+                return lists[temp_list[0]];
+            }
+//            if(temp_list[0]+1==temp_list[1]){
+//                return mergeTwoLists(lists[temp_list[0]],lists[temp_list[0]]);
+//            }
+            else {
+                int[] new_list = get_it(temp_list[0], temp_list[1]);
+                int[] lower={new_list[0],new_list[1]};
+                int[] upper={new_list[1],new_list[2]};
+                node1=merge_func(lists, lower);//传入begin和middle的值。
+                node2=merge_func(lists, upper);//传入begin和middle的值。
+                //TODO:合并内容
+            }
+            return mergeTwoLists(node1,node2);
+        }
+
+        /**
+         *
+         * 输入是起始序号、结束序号，返回起始序号、结束序号和中间序号，构成int数组并返回。
          * @param begin
          * @param end
-         * @return 一个ArrayList数组，给出第一个节点的位置，和第二个节点的位置。
+         * @return 一个int[3]数组，包含begin、middle和end三个数。
          */
         public static int[] get_it(int begin, int end){
             int middle=(int)Math.floor((double) ((begin+end)/2));

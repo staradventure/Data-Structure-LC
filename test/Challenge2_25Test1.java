@@ -4,14 +4,17 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import raw.Challenge2_25;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static raw.Challenge2_25.Solution.mergeKLists;
 
 class Challenge2_25Test1 {
 
     static Challenge2_25.Solution.ListNode[] listNodes={};
+    static Challenge2_25.Solution.ListNode result;
 
     @BeforeAll
     static void createList(){
@@ -39,10 +42,17 @@ class Challenge2_25Test1 {
     }
 
     @Test
-    void simpleTest1(){
-        for(Challenge2_25.Solution.ListNode node:listNodes){
-            System.out.println(node.val);
-        }
+    void shortTimeTest1(){
+        assertTimeoutPreemptively(Duration.ofMillis(40),()->{
+            Challenge2_25.Solution.ListNode testing=mergeKLists(listNodes);
+        });
+    }
+
+    @Test
+    void okTest1(){
+        assertDoesNotThrow(()->{
+            Challenge2_25.Solution.ListNode testing=mergeKLists(listNodes);
+        });
     }
 
 }

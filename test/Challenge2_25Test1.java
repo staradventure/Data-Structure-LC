@@ -6,7 +6,7 @@ import raw.Challenge2_25;
 
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.Arrays;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 import static raw.Challenge2_25.Solution.mergeKLists;
@@ -42,8 +42,15 @@ class Challenge2_25Test1 {
     }
 
     @Test
-    void shortTimeTest1(){
+    void shortTimeTest1_40ms(){
         assertTimeoutPreemptively(Duration.ofMillis(40),()->{
+            Challenge2_25.Solution.ListNode testing=mergeKLists(listNodes);
+        });
+    }
+
+    @Test
+    void shortTimeTest2_100ms(){
+        assertTimeoutPreemptively(Duration.ofMillis(100),()->{
             Challenge2_25.Solution.ListNode testing=mergeKLists(listNodes);
         });
     }
@@ -53,6 +60,21 @@ class Challenge2_25Test1 {
         assertDoesNotThrow(()->{
             Challenge2_25.Solution.ListNode testing=mergeKLists(listNodes);
         });
+    }
+
+    @Test
+    void whetherCorrectTest1(){
+        ArrayList<Integer> list=new ArrayList<>();
+        Challenge2_25.Solution.ListNode result=mergeKLists(listNodes);
+        Challenge2_25.Solution.ListNode t=result;
+        while(t!=null){
+            System.out.println(t.val);
+            list.add(t.val);
+            t=t.next;
+        }
+        Integer [] actual=list.toArray(new Integer[0]);
+        Integer [] expected={1,1,2,3,4,4,5,6};
+        assertArrayEquals(expected,actual);
     }
 
 }

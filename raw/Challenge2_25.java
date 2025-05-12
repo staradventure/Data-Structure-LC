@@ -27,7 +27,7 @@ public class Challenge2_25 {
             else {
                 int[] new_list = get_it(temp_list[0], temp_list[1]);
                 int[] lower={new_list[0],new_list[1]};
-                int[] upper={new_list[1],new_list[2]};
+                int[] upper={new_list[1]+1,new_list[2]};
                 node1=merge_func(lists, lower);//传入begin和middle的值。
                 node2=merge_func(lists, upper);//传入begin和middle的值。
                 //TODO:合并内容
@@ -40,7 +40,7 @@ public class Challenge2_25 {
          * 输入是起始序号、结束序号，返回起始序号、结束序号和中间序号，构成int数组并返回。
          * @param begin
          * @param end
-         * @return 一个int[3]数组，包含begin、middle和end三个数。
+         * @return 一个int[3]数组，包含begin、middle和end三个数。middle经过了向下取整。
          */
         public static int[] get_it(int begin, int end){
             int middle=(int)Math.floor((double) ((begin+end)/2));

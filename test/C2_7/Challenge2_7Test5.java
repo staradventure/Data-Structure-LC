@@ -4,7 +4,7 @@ import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import raw.Challenge2_7;
+import raw.Chapter2.Challenge2_7;
 
 import static org.junit.jupiter.api.Assertions.*;
 

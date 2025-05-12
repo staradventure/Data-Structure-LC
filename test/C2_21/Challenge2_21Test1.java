@@ -2,12 +2,12 @@ package test.C2_21;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import raw.Challenge2_21;
+import raw.Chapter2.Challenge2_21;
 
 import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static raw.Challenge2_21.Solution.splitListToParts;
+import static raw.Chapter2.Challenge2_21.Solution.splitListToParts;
 
 class Challenge2_21Test1 {
 

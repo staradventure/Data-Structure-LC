@@ -1,10 +1,10 @@
 package test.C2_17;
 
 import org.junit.jupiter.api.Test;
-import raw.Challenge2_17;
+import raw.Chapter2.Challenge2_17;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static raw.Challenge2_17.Solution.isPalindrome;
+import static raw.Chapter2.Challenge2_17.Solution.isPalindrome;
 
 class Challenge2_17Test {
 

@@ -1,12 +1,12 @@
 package test.C2_10;
 
 import org.junit.jupiter.api.*;
-import raw.Challenge2_10;
+import raw.Chapter2.Challenge2_10;
 
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static raw.Challenge2_10.Solution.deleteNode;
+import static raw.Chapter2.Challenge2_10.Solution.deleteNode;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class Challenge2_10Test {

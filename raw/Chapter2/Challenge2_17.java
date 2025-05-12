@@ -1,8 +1,7 @@
-package raw;
+package raw.Chapter2;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Stack;
 
 public class Challenge2_17 {
     public class Solution {

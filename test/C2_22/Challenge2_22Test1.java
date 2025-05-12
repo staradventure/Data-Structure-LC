@@ -1,11 +1,11 @@
 package test.C2_22;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static raw.Challenge2_22.Solution.deleteDuplicates;
+import static raw.Chapter2.Challenge2_22.Solution.deleteDuplicates;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import raw.Challenge2_22;
+import raw.Chapter2.Challenge2_22;
 
 import java.util.ArrayList;
 

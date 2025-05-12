@@ -2,14 +2,14 @@ package test.C2_23;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import raw.Challenge2_23;
+import raw.Chapter2.Challenge2_23;
 
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static raw.Challenge2_23.Solution.deleteDuplicates;
+import static raw.Chapter2.Challenge2_23.Solution.deleteDuplicates;
 
 class Challenge2_23Test3 {
 

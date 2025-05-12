@@ -2,13 +2,13 @@ package test.C2_18;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import raw.Challenge2_18;
+import raw.Chapter2.Challenge2_18;
 
 import java.time.Duration;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static raw.Challenge2_18.Solution.reorderList;
+import static raw.Chapter2.Challenge2_18.Solution.reorderList;
 import static org.junit.jupiter.api.Assertions.assertTimeoutPreemptively;
 
 class Challenge2_18Test1 {

@@ -1,4 +1,4 @@
-package raw;
+package raw.Chapter2;
 
 import java.util.ArrayList;
 

@@ -1,8 +1,6 @@
-package raw;
+package raw.Chapter2;
 
-import java.util.Arrays;
-
-public class Challenge2_3 {
+public class Challenge2_4 {
     public static int removeDuplicates(int[] nums) {
         int size = nums.length;
         int temp = size;
@@ -16,10 +14,14 @@ public class Challenge2_3 {
                 amount++;
                 j++;
             }
-            for (int k = i + amount; k < temp; k++) {
-                nums[k - amount] = nums[k];
+            int middle=i+1;
+            int actual_amount=amount-1;
+            if(amount>1){
+                for (int k = middle + actual_amount; k < temp; k++) {
+                    nums[k - actual_amount] = nums[k];
+                }
+                temp = temp - actual_amount;
             }
-            temp = temp - amount;
         }
         int result = temp;
         return result;

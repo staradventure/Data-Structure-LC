@@ -1,7 +1,6 @@
-package raw;
+package raw.Chapter2;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Challenge2_6 {
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {

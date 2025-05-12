@@ -1,7 +1,4 @@
-package raw;
-
-import java.util.ArrayList;
-import java.util.List;
+package raw.Chapter2;
 
 public class Challenge2_25 {
     public class Solution {

@@ -1,10 +1,10 @@
 package test.C2_8;
 
 import org.junit.jupiter.api.*;
-import raw.Challenge2_8;
+import raw.Chapter2.Challenge2_8;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static raw.Challenge2_8.Solution.list;
+import static raw.Chapter2.Challenge2_8.Solution.list;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class Challenge2_8Test2 {

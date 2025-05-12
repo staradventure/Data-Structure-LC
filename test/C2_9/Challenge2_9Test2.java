@@ -2,8 +2,8 @@ package test.C2_9;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import raw.Challenge2_9;
-import static raw.Challenge2_9.Solution.removeElements;
+import raw.Chapter2.Challenge2_9;
+import static raw.Chapter2.Challenge2_9.Solution.removeElements;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

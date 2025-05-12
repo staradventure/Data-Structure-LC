@@ -1,7 +1,7 @@
 package test.C2_7;
 
 import org.junit.jupiter.api.*;
-import raw.Challenge2_7;
+import raw.Chapter2.Challenge2_7;
 
 import static org.junit.jupiter.api.Assertions.*;
 

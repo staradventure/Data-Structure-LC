@@ -4,13 +4,13 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import raw.Challenge2_19;
-import raw.Challenge2_19.Solution.ListNode;
+import raw.Chapter2.Challenge2_19;
+import raw.Chapter2.Challenge2_19.Solution.ListNode;
 
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static raw.Challenge2_19.Solution.insertionSortList;
+import static raw.Chapter2.Challenge2_19.Solution.insertionSortList;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class Challenge2_19Test1 {

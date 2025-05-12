@@ -1,12 +1,12 @@
 package test.C2_11;
 
 import org.junit.jupiter.api.*;
-import raw.Challenge2_11;
+import raw.Chapter2.Challenge2_11;
 
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static raw.Challenge2_11.Solution.reverseList;
+import static raw.Chapter2.Challenge2_11.Solution.reverseList;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class Challenge2_11Test {

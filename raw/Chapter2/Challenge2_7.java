@@ -1,4 +1,4 @@
-package raw;
+package raw.Chapter2;
 
 public class Challenge2_7 {
     public static class MyLinkedList {

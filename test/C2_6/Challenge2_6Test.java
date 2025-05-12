@@ -3,7 +3,7 @@ package test.C2_6;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static raw.Challenge2_6.findMedianSortedArrays;
+import static raw.Chapter2.Challenge2_6.findMedianSortedArrays;
 
 class Challenge2_6Test {
 

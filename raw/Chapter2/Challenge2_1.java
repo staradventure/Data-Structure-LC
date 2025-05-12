@@ -1,8 +1,6 @@
-package raw;
+package raw.Chapter2;
 
 import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.Collections;
 
 public class Challenge2_1 {
     class Solution {

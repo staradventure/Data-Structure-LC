@@ -2,12 +2,12 @@ package test.C2_20;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import raw.Challenge2_20;
+import raw.Chapter2.Challenge2_20;
 
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static raw.Challenge2_20.Solution.reverseGroup;
+import static raw.Chapter2.Challenge2_20.Solution.reverseGroup;
 
 class Challenge2_20Test2 {
 

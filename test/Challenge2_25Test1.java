@@ -2,14 +2,14 @@ package test;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import raw.Challenge2_25;
+import raw.Chapter2.Challenge2_25;
 
 import java.time.Duration;
 import java.util.ArrayList;
 
 
 import static org.junit.jupiter.api.Assertions.*;
-import static raw.Challenge2_25.Solution.mergeKLists;
+import static raw.Chapter2.Challenge2_25.Solution.mergeKLists;
 
 class Challenge2_25Test1 {
 

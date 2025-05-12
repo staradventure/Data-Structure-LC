@@ -1,7 +1,7 @@
 package test.C2_5;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static raw.Challenge2_5.merge;
+import static raw.Chapter2.Challenge2_5.merge;
 
 class Challenge2_5Test {
 

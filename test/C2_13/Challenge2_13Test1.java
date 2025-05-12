@@ -2,12 +2,12 @@ package test.C2_13;
 
 import org.junit.jupiter.api.*;
 
-import raw.Challenge2_13;
+import raw.Chapter2.Challenge2_13;
 
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static raw.Challenge2_13.Solution.oddEvenList;
+import static raw.Chapter2.Challenge2_13.Solution.oddEvenList;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class Challenge2_13Test1 {

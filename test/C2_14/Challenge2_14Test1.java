@@ -1,7 +1,7 @@
 package test.C2_14;
 
 import org.junit.jupiter.api.*;
-import raw.Challenge2_14;
+import raw.Chapter2.Challenge2_14;
 
 import java.util.ArrayList;
 

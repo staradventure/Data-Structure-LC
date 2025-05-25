@@ -1,7 +1,7 @@
-package test;
+package test.C3.C3_1;
 
 import org.junit.jupiter.api.Test;
-import raw.Challenge3_1;
+import raw.Chapter3.Challenge3_1;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 

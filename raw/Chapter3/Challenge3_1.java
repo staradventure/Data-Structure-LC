@@ -1,4 +1,4 @@
-package raw;
+package raw.Chapter3;
 
 public class Challenge3_1 {
     public static class CustomStack {

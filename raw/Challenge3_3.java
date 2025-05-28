@@ -14,9 +14,26 @@ public class Challenge3_3 {
                     stack.push(e);
                 }
                 else{
-
+                    if(e==')'){
+                        if(stack.isEmpty()) return false;
+                        if(stack.peek()!='(') return false;
+                        stack.pop();
+                    }
+                    if(e==']'){
+                        if(stack.isEmpty()) return false;
+                        if(stack.peek()!='[') return false;
+                        stack.pop();
+                    }
+                    if(e=='}'){
+                        if(stack.isEmpty()) return false;
+                        if(stack.peek()!='{') return false;
+                        stack.pop();
+                    }
                 }
+                i++;
             }
+            if(stack.isEmpty()) return true;
+            else return false;
         }
     }
 }

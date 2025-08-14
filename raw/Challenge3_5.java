@@ -1,67 +1,99 @@
 package raw;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Stack;
 import java.util.stream.Collectors;
 
 
 public class Challenge3_5 {
     public static class Solution {
         public static boolean validateStackSequences(int[] pushed, int[] popped) {
-            int len = pushed.length + popped.length;
+            int  num =0b0;
+            ArrayList<Integer> list;
+
+            int bit_nums=pushed.length+popped.length;
+            int len= (int)Math.pow(2,(double)pushed.length + popped.length);
             ArrayList<Integer> pushed_list = new ArrayList<Integer>(Arrays.stream(pushed).boxed().collect(Collectors.toList()));
             ArrayList<Integer> popped_list = new ArrayList<Integer>(Arrays.stream(popped).boxed().collect(Collectors.toList()));
-            ArrayList<Integer> list = new ArrayList<>();//一个比特中，0表示这一次入栈，1表示这一次出栈。
-            LinkedList<Integer> pushed_queue = new LinkedList<>(pushed_list);
-            LinkedList<Integer> popped_queue = new LinkedList<>(popped_list);
+            //一个比特中，0表示这一次入栈，1表示这一次出栈。
+
+            String binaryStr = Integer.toBinaryString(num);
+            int[] bits = binaryStr.chars().map(c -> c - '0').toArray();
+            list = Arrays.stream(bits)
+                    .boxed()
+                    .collect(Collectors.toCollection(ArrayList::new));
+
             //编写记录的位数
             if (list.isEmpty()) {
                 list.add(0);
             }
-            Boolean main_flag = false;
             while (true) {
-                if (exeMethod(pushed_queue, popped_queue, list)) {
-                    main_flag = true;
-                    break;
+                if (exeMethod(popped_list, pushed_list, list)) {
+                    return true;
                 } else {
-                    if (!adding(list, len)) {
-                        main_flag = false;
-                        break;
+                    num=num+1;
+                    if (!adding(num, list, len,bit_nums)) {
+                        return false;
+                        //已经超过上限了，return false即可。
                     }
                 }
             }
-            return main_flag;
         }
 
-        //把list写上下一组可能性。
-        private static Boolean adding(ArrayList<Integer> list, int len) {
-            if (list.size() < len) {
-                if (list.get(list.size() - 1) == 0) {
-                    list.set(list.size() - 1, 1);
-                } else {
-                    list.add(0);
-                }
+        /**
+         * 用二进制表示每一种可能性
+         * @param num 二进制数
+         * @param list 比特列
+         * @param len 非确界的上限
+         * @return num<=len的时候返回true，num>len的时候返回false
+         */
+        private static Boolean adding(int num,ArrayList<Integer> list, int len,int bit_nums) {
+            String binaryStr_bit = "0".repeat(bit_nums);
+            int zeros = Integer.parseInt(binaryStr_bit, 2);
+            Integer result_num=zeros | num;
+            String binaryStr_update = String.format("%" + bit_nums + "s", Integer.toBinaryString(result_num)).replace(' ', '0');
+            list.clear();
+            int[] bit_update = binaryStr_update.chars().map(c -> c - '0').toArray();
+            for (int bit : bit_update) {
+                list.add(bit);
+            }
+
+            if(num<=len){
                 return true;
-            } else return false;
+            }
+            else{
+                return false;
+            }
         }
 
         //执行每一种可能性
-        private static Boolean exeMethod(LinkedList<Integer> pushed_queue, LinkedList<Integer> popped_queue, ArrayList<Integer> list) {
+        public static Boolean exeMethod(ArrayList<Integer> popped_list,ArrayList<Integer> pushed_list,ArrayList<Integer> list) {
+            LinkedList<Integer> pushed_queue = new LinkedList<>(pushed_list);
+            LinkedList<Integer> popped_queue = new LinkedList<>(popped_list);
             Stack<Integer> stack = new Stack<>();
-            Boolean flag = true;
+            //这一段得确定当前list里的是否能成为最终解。
             for (int i = 0; i < list.size(); i++) {
                 if (list.get(i) == 0) {//也就是说，这一次要入栈
-                    stack.push(pushed_queue.pop());
+                    if(!pushed_queue.isEmpty())
+                        stack.push(pushed_queue.pop());//给栈入栈
+                    else
+                        return false;
                 } else if (list.get(i) == 1) {//也就是说，这一次要出栈
-                    int temp = stack.pop();
-                    if (temp == popped_queue.peek()) {//这次的出栈序列是可以继续模拟的
-                        popped_queue.pop();
+                    Integer value=popped_queue.poll();
+                    if(value ==null)
+                        return false;
+                    if(stack.isEmpty())
+                        return false;
+                    if (value == stack.peek()) {//这次的出栈序列是可以继续模拟的
+                        stack.pop();
                     } else {
-                        flag = false;
-                        break;
+                        return false;
                     }
                 }
             }
-            return flag;
+            return stack.isEmpty();
         }
 
     }

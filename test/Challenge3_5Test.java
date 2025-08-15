@@ -33,4 +33,13 @@ class Challenge3_5Test {
         assertEquals(expected,actual);
     }
 
+    @Test
+    void simpleTest4(){
+        int [] pushed={9,5,1,3,4,2,6,8,0,7};
+        int [] popped={2,7,0,5,3,4,8,6,9,1};
+        Boolean actual=validateStackSequences(pushed,popped);
+        Boolean expected=false;
+        assertEquals(expected,actual);
+    }
+
 }

@@ -1,9 +1,9 @@
-package test;
+package test.C3.C3_5;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static raw.Challenge3_5.Solution.validateStackSequences;
+import static raw.Chapter3.Challenge3_5.Solution.validateStackSequences;
 
 class Challenge3_5Test {
     @Test

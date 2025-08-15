@@ -1,7 +1,7 @@
-package test;
+package test.C3.C3_5;
 
 import org.junit.jupiter.api.Test;
-import raw.Challenge3_5;
+import raw.Chapter3.Challenge3_5;
 
 import java.util.ArrayList;
 import java.util.Arrays;
